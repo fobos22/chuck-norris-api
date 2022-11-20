@@ -1,0 +1,8 @@
+CREATE DATABASE chuck;
+USE chuck;
+
+CREATE TABLE Phrases (
+  ID int NOT NULL AUTO_INCREMENT,
+  phrase text NOT NULL,
+  PRIMARY KEY (ID)
+);
