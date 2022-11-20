@@ -15,7 +15,7 @@ export default function Home() {
   React.useEffect(() => {
     async function get() {
       const phrasesReq = await axios.get(
-        "http://localhost:3000/api/showPhrase"
+        "/api/showPhrase"
       );
       setPhrase(phrasesReq.data.phrases);
     }
@@ -24,13 +24,13 @@ export default function Home() {
 
   const handleGetPhrase = async () => {
     await axios.get("/api/getPhrase");
-    const phrasesReq = await axios.get("http://localhost:3000/api/showPhrase");
+    const phrasesReq = await axios.get("}/api/showPhrase");
     setPhrase(phrasesReq.data.phrases);
   };
 
   const handleDeletePhrases = async () => {
     await axios.get("/api/deletePhrases");
-    const phrasesReq = await axios.get("http://localhost:3000/api/showPhrase");
+    const phrasesReq = await axios.get("/api/showPhrase");
     setPhrase(phrasesReq.data.phrases);
   };
   return (
