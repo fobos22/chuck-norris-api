@@ -24,7 +24,7 @@ export default function Home() {
 
   const handleGetPhrase = async () => {
     await axios.get("/api/getPhrase");
-    const phrasesReq = await axios.get("}/api/showPhrase");
+    const phrasesReq = await axios.get("/api/showPhrase");
     setPhrase(phrasesReq.data.phrases);
   };
 
